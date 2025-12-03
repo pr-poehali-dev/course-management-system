@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "Get student profile",
+      "method": "GET",
+      "path": "/?action=profile&student_id=1",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "student": {
+          "id": "number",
+          "full_name": "string"
+        },
+        "courses": [],
+        "attendance": []
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
